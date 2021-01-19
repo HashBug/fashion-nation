@@ -3,6 +3,7 @@ import FormInput from "../../components/form-input/FormInput";
 import CustomButton from "../../components/custom-button/CustomButton";
 import "./sign-in.styles.scss";
 import { SignInWithGoogle } from "../../utils/firebase/firebase.utils";
+import { Link } from "react-router-dom";
 
 class SignIn extends Component {
   constructor(props) {
@@ -55,6 +56,9 @@ class SignIn extends Component {
             </CustomButton>
           </div>
         </form>
+        <span>
+          Don't have an account? <Link to="/sign-up">SignUp</Link>
+        </span>
       </div>
     );
   }
