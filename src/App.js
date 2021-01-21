@@ -4,11 +4,14 @@ import { createStructuredSelector } from "reselect";
 import { selectCurrentUser } from "./redux/user/user.selectors";
 import { setCurrentUser } from "./redux/user/user.actions";
 import { Switch, Route, Redirect } from "react-router-dom";
+
 import Homepage from "./pages/homepage/Homepage";
 import Shop from "./pages/shop/shop";
-import Header from "./components/header/Header";
 import SignIn from "./pages/sign-in/SignIn";
 import SignUp from "./pages/sign-up/SignUp";
+import Checkout from "./pages/checkout/Checkout";
+
+import Header from "./components/header/Header";
 import {
   auth,
   createUserProfileDocument,
@@ -67,6 +70,7 @@ class App extends Component {
               this.props.currentUser ? <Redirect to="/" /> : <SignUp />
             }
           />
+          <Route exact path="/checkout" component={Checkout} />
         </Switch>
       </div>
     );
