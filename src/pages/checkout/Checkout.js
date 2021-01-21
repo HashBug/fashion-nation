@@ -6,7 +6,6 @@ import CheckoutItem from "../../components/checkout-item/CheckoutItem";
 
 const Checkout = ({ cartItems, total }) => (
   <div className="checkout-page">
-    <h1>Checkout</h1>
     <div className="checkout-header">
       <div className="header-block">
         <span>Product</span>
