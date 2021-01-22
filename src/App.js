@@ -18,8 +18,6 @@ import {
 } from "./utils/firebase/firebase.utils";
 import "./App.css";
 
-const Hats = () => <h1>Hats</h1>;
-
 class App extends Component {
   unsubscribeFromAuth = null;
 
@@ -54,8 +52,7 @@ class App extends Component {
         <Header />
         <Switch>
           <Route exact path="/" component={Homepage} />
-          <Route exact path="/shop" component={Shop} />
-          <Route path="/shop/hats" component={Hats} />
+          <Route path="/shop" component={Shop} />
           <Route
             exact
             path="/sign-in"
